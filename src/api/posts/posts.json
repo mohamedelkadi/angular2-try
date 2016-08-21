@@ -1,0 +1,18 @@
+[
+    {
+        "title": "firstpost",
+        "content": "somecontent",
+        "date": "1/2/2000",
+        "author": "molhm",
+        "img": "http://www.swiss-miss.com/wp-content/uploads/2013/01/PigeonPost1.jpg",
+        "rating": 4
+    },
+    {
+        "title": "secondpost",
+        "content": "someothercontent",
+        "date": "1/2/2000",
+        "author": "molhm",
+        "img": "http://www.swiss-miss.com/wp-content/uploads/2013/01/PigeonPost1.jpg",
+        "rating": 3
+    }
+]

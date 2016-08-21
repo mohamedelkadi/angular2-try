@@ -1,0 +1,23 @@
+<form class="form-inline" id="search-form" role="search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search" [(ngModel)]='postFilter'>
+  </div>
+  <button type="submit" class="btn btn-default">
+          <i class="glyphicon glyphicon-search"></i>
+        </button>
+  <button type="submit" class="btn btn-default" (click)="toggleImg()">
+        {{showImg ? 'hide' : 'show' }} image 
+        </button>
+</form>
+<p> filtered by {{postFilter}}</p>
+<div class="blog-post" *ngFor='let post of posts | PostFilter:postFilter '>
+  <h2 class="blog-post-title">  <a [routerLink]="[ '/post',post.title]"> {{ post.title }} </a></h2>
+  <img *ngIf='showImg' [src]='post.img' />
+  <p class="blog-post-meta"> {{post.date}} by <a href="#">{{post.author}}</a>
+    <app-stars [rating]='post.rating' (ratingClicked)='onRatingClicked($event)'>
+      >rating</app-stars>
+  </p>
+  <p>
+    {{ post.content }}
+  </p>
+</div>
